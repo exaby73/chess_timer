@@ -10,6 +10,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:chess_timer/core/di/modules/bloc_module.dart' as _i574;
 import 'package:chess_timer/core/routing/app_router.dart' as _i95;
+import 'package:chess_timer/services/timer_data_service.dart' as _i994;
 import 'package:chess_timer/state/timer_cubit.dart' as _i375;
 import 'package:flutter_bloc/flutter_bloc.dart' as _i331;
 import 'package:get_it/get_it.dart' as _i174;
@@ -29,6 +30,7 @@ extension GetItInjectableX on _i174.GetIt {
     final blocModule = _$BlocModule();
     gh.singleton<_i95.AppRouter>(() => _i95.AppRouter());
     gh.singleton<_i375.TimerCubit>(() => _i375.TimerCubit());
+    gh.singleton<_i994.TimerDataService>(() => const _i994.TimerDataService());
     gh.singleton<
         List<_i331.BlocProvider<_i331.StateStreamableSource<Object?>>>>(
       () => blocModule.providers,
