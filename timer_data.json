@@ -1,7 +1,17 @@
 [
   {
-    "name": "10 Minutes",
-    "time": 600,
-    "increment": 10
+    "name": "Rapid",
+    "timers": [
+      {
+        "name": "10",
+        "time": 600,
+        "increment": 10
+      },
+      {
+        "name": "15|10",
+        "time": 900,
+        "increment": 15
+      }
+    ]
   }
 ]
