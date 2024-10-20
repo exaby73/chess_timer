@@ -29,13 +29,14 @@ extension GetItInjectableX on _i174.GetIt {
     );
     final blocModule = _$BlocModule();
     gh.singleton<_i95.AppRouter>(() => _i95.AppRouter());
-    gh.singleton<_i375.TimerCubit>(() => _i375.TimerCubit());
     gh.singleton<_i994.TimerDataService>(() => const _i994.TimerDataService());
     gh.singleton<
         List<_i331.BlocProvider<_i331.StateStreamableSource<Object?>>>>(
       () => blocModule.providers,
       instanceName: 'providers',
     );
+    gh.singleton<_i375.TimerCubit>(
+        () => _i375.TimerCubit(gh<_i994.TimerDataService>()));
     return this;
   }
 }

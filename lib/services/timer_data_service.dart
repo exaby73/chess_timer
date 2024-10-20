@@ -9,7 +9,7 @@ import "package:injectable/injectable.dart";
 final class TimerDataService {
   const TimerDataService();
 
-  Future<List<TimerCategory>> getCategories() async {
+  Future<List<TimerCategory>> loadCategories() async {
     final data = await rootBundle.loadString(Assets.data.timerData);
     final json = jsonDecode(data);
     return [

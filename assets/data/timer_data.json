@@ -1,6 +1,7 @@
 [
   {
     "name": "Rapid",
+    "color": "#81B64C",
     "timers": [
       {
         "name": "10",
